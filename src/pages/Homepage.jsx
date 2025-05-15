@@ -7,13 +7,9 @@ function Homepage() {
     <div className='flex flex-col justify-start h-screen'>
     <Navbar/>
     <div>
-
     </div>
-
     <BookList />
-
     </div>
-    
     </>
   )
 }
