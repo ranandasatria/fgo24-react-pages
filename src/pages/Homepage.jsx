@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar'
+import BookList from '../components/BookList';
 
 function Homepage() {
   return(
@@ -6,9 +7,11 @@ function Homepage() {
     <div className='flex flex-col justify-start h-screen'>
     <Navbar/>
     <div>
-      
+
     </div>
-     <div className="p-4">Ini halaman Home</div>
+
+    <BookList />
+
     </div>
     
     </>
