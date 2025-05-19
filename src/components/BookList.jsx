@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react"
 
 function BookList() {
+const apiKey = import.meta.env.VITE_NYT_API_KEY;
+
   const [books, setBooks] = useState([])
 
   useEffect(() => {
-    fetch('https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${import.meta.env.VITE_NYTIMES_API_KEY}')
+    fetch(`https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${apiKey}`)
       .then((res) => res.json())
       .then((data) => {
         setBooks(data.results.books)
